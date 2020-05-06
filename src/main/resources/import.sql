@@ -4,9 +4,9 @@ INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('3
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455703', 'pablo', 'moby', '3434343', 'pablo@gmail.com');
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455704', 'pedro', 'martinez', '3434343', 'pedro@gmail.com');
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455705', 'marcos', 'mariano', '3434343', 'marcos@gmail.com');
-INSERT INTO `keys` (`id`, `name`) VALUES ('1', 'cocina');
-INSERT INTO `keys` (`id`, `name`) VALUES ('2', 'entrada');
-INSERT INTO `keys` (`id`, `name`) VALUES ('3', 'porton');
+INSERT INTO `keys` (`id`, `name`,`user_dni`) VALUES ('1', 'patios','34455701');
+INSERT INTO `keys` (`id`, `name`,`user_dni`) VALUES ('2', 'comedorr','34455701');
+INSERT INTO `keys` (`id`, `name`,`user_dni`) VALUES ('3', 'portosn','34455701');
 INSERT INTO `doors` (`id`, `name`) VALUES ('1', 'patio');
 INSERT INTO `doors` (`id`, `name`) VALUES ('2', 'cocina');
 INSERT INTO `doors` (`id`, `name`) VALUES ('3', 'entrada');

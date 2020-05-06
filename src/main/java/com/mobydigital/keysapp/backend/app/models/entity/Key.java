@@ -3,7 +3,9 @@ package com.mobydigital.keysapp.backend.app.models.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +18,8 @@ public class Key implements Serializable {
 	private Integer id;
 	private String name;
 	
+
+
 	public Integer getId() {
 		return id;
 	}

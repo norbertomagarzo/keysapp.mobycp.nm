@@ -1,10 +1,15 @@
 package com.mobydigital.keysapp.backend.app.models.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -19,6 +24,23 @@ public class User implements Serializable {
 	@Column(nullable = false)
 	private String lastname;
 	private String email;
+	
+	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private List<Key> keys;
+
+
+	public User() {
+		keys = new ArrayList<Key>();
+      
+	}
+
+	public List<Key> getKeys() {
+		return keys;
+	}
+
+	public void setKeys(List<Key> keys) {
+		this.keys = keys;
+	}
 
 	public Integer getDni() {
 		return dni;
@@ -58,6 +80,10 @@ public class User implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public void addKeys(Key key) {
+		keys.add(key);
 	}
 
 	private static final long serialVersionUID = 1L;
