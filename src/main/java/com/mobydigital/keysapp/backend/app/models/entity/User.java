@@ -3,6 +3,7 @@ package com.mobydigital.keysapp.backend.app.models.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,10 +25,30 @@ public class User implements Serializable {
 	@Column(nullable = false)
 	private String lastname;
 	private String email;
-	
+	/*
 	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	private List<Key> keys;
+	*/
+	  
 
+
+	    @OneToMany(mappedBy = "user")
+	    private Set<Key> keys;
+
+	
+
+
+	    public Set<Key> getKey() {
+	        return keys;
+	    }
+
+	    public void setKey(Set<Key> keys) {
+	        this.keys = keys;
+	    }
+
+	
+	
+/*
 
 	public User() {
 		keys = new ArrayList<Key>();
@@ -40,7 +61,7 @@ public class User implements Serializable {
 
 	public void setKeys(List<Key> keys) {
 		this.keys = keys;
-	}
+	}  */
 
 	public Integer getDni() {
 		return dni;
