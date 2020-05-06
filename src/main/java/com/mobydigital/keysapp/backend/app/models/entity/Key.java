@@ -24,13 +24,9 @@ public class Key implements Serializable {
 	public Key() {
 	}
 
-	public Key(User u) {
-		this.user = u;
-	}
+	
 
-	public User getUser() {
-		return user;
-	}
+	
 
 	public void setUser(User user) {
 		this.user = user;

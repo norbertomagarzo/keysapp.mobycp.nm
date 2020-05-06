@@ -5,8 +5,8 @@ INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('3
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455704', 'pedro', 'martinez', '3434343', 'pedro@gmail.com');
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455705', 'marcos', 'mariano', '3434343', 'marcos@gmail.com');
 INSERT INTO `keys` (`id`, `name`,`dni`) VALUES ('1','patio', '34455701');
-INSERT INTO `keys` (`id`, `name`,`dni`) VALUES ('2','porton', '34455701');
-INSERT INTO `keys` (`id`, `name`,`dni`) VALUES ('3','cocina', '34455701');
+INSERT INTO `keys` (`id`, `name`) VALUES ('2','porton');
+INSERT INTO `keys` (`id`, `name`) VALUES ('3','cocina');
 INSERT INTO `doors` (`id`, `name`) VALUES ('1', 'patio');
 INSERT INTO `doors` (`id`, `name`) VALUES ('2', 'cocina');
 INSERT INTO `doors` (`id`, `name`) VALUES ('3', 'entrada');

@@ -103,9 +103,7 @@ public class User implements Serializable {
 		this.email = email;
 	}
 	
-	public void addKeys(Key key) {
-		keys.add(key);
-	}
+	
 
 	private static final long serialVersionUID = 1L;
 
